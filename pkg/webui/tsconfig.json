@@ -5,6 +5,8 @@
     "strict": true,
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
+    "types": [],
     "outDir": "out"
-  }
+  },
+  "include": ["src"]
 }

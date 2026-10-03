@@ -30,7 +30,7 @@ $(ui_deps): $(webui)/package.json
 	cd $(webui) && npm install
 	touch $@
 $(webui)/out/.ts-build: $(ts_src) $(webui)/tsconfig.json $(ui_deps)
-	cd $(webui) && tsc
+	cd $(webui) && npx tsc
 	touch $@
 $(webui)/out/bundle.js: $(webui)/out/.ts-build $(webui)/webpack.config.js
 	cd $(webui) && npx webpack
